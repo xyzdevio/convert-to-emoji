@@ -27,6 +27,8 @@ Starting solely with the github specific ones and then adding more as time goes 
 
 - Using *the* github [emoji cheat sheet](https://github.com/ikatyang/emoji-cheat-sheet) as default basis for what emojis to include
 - grabbing image versions from [emojipedia](https://emojipedia.org/) for a quick copy
+- actually, just found the [open resource](https://unicode.org/emoji/charts/full-emoji-list.html) for this --> maybe i can purely do this by queries like the emoji-cheat-sheet is doing
+  - this [explanation page](https://cldr.unicode.org/#TOC-What-is-CLDR-) goes with it
 
 :warning:
 :grinning:
