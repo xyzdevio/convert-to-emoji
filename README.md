@@ -21,7 +21,12 @@ Starting solely with the github specific ones and then adding more as time goes 
 
 :warning: This means though, that I do need to add a warning or error on the action that if it runs and finds something that could count as an emoji, but doesnt have it on record, it still notifies the user instead of erroring silently.
 
-## Steps
+## Steps (TOC)
+
+## Initial Content
+
+- Using *the* github [emoji cheat sheet](https://github.com/ikatyang/emoji-cheat-sheet) as default basis for what emojis to include
+- grabbing image versions from [emojipedia](https://emojipedia.org/) for a quick copy
 
 :warning:
 :grinning:
