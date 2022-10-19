@@ -12,6 +12,8 @@ Problem is, half the time those items dont directly copy or show up as pure text
 
 Create github action that converts any items that follow the format :descr: to an actual visual emoji version of the text.
 
+This would be great to add to the action sequence that runs before a github pages deployment.
+
 ### Limitations:
 
 Dont want to use an extensive database here, so this will be limited by how many emojis there are out there that are easily grab-able (not grabbing all of emojipedia for ex).<br/>
