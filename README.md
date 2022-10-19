@@ -1,2 +1,33 @@
 # convert-to-emoji
-github action to convert :descr: items into their pure emoji version
+
+## Initial Notes
+
+### Motivation:
+
+I like writing things in the base markdown and slack/discord style where you can grab the item directly from the code instead of searching for them from a direct emoji maker.
+
+Problem is, half the time those items dont directly copy or show up as pure text even in .mdx files.
+
+### Goal:
+
+Create github action that converts any items that follow the format :descr: to an actual visual emoji version of the text.
+
+This would be great to add to the action sequence that runs before a github pages deployment.
+
+### Limitations:
+
+Dont want to use an extensive database here, so this will be limited by how many emojis there are out there that are easily grab-able (not grabbing all of emojipedia for ex).<br/>
+Starting solely with the github specific ones and then adding more as time goes on.
+
+:warning: This means though, that I do need to add a warning or error on the action that if it runs and finds something that could count as an emoji, but doesnt have it on record, it still notifies the user instead of erroring silently.
+
+## Steps (TOC)
+
+## Initial Content
+
+- Using *the* github [emoji cheat sheet](https://github.com/ikatyang/emoji-cheat-sheet) as default basis for what emojis to include
+- grabbing image versions from [emojipedia](https://emojipedia.org/) for a quick copy
+
+:warning:
+:grinning:
+
