@@ -29,6 +29,7 @@ Starting solely with the github specific ones and then adding more as time goes 
 - grabbing image versions from [emojipedia](https://emojipedia.org/) for a quick copy
 - actually, just found the [open resource](https://unicode.org/emoji/charts/full-emoji-list.html) for this --> maybe i can purely do this by queries like the emoji-cheat-sheet is doing
   - this [explanation page](https://cldr.unicode.org/#TOC-What-is-CLDR-) goes with it
+- even more of a dumdum, this api exists for easy use: https://docs.github.com/en/rest/emojis
 
 :warning:
 :grinning:
