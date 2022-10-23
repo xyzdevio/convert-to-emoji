@@ -17,15 +17,19 @@ for item in $list; do
     echo $str
     # find in github api
     github_url=""
+    unicode=""
     if true
     then
+        # TODO - instead of using github url for the full image, need to grab
+        # the actual unicode character U+1f4af
         github_url="https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8"
+        unicode="U+1f4af"
         echo "converting - $item"
     else
         echo "WARNING - $item is not a viable github emoji to convert"
         continue
     fi
     # replace str in file as img link
-    sed -i -e "s,$item,\![$item]($github_url),g" $filename
+    sed -i -e "s,$item,\![$item]($unicode),g" $filename
 done
 
