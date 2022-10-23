@@ -28,7 +28,10 @@ for item in $list; do
     then
         echo "WARNING - $item is not a viable github emoji to convert"
         continue
+    else
+        echo "github_url is \'$github_url\'"
     fi
+
 
     # TODO - instead of using github url for the full image, need to grab
     # the actual unicode character U+1f4af
