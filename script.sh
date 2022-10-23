@@ -19,7 +19,7 @@ for item in $list; do
     github_url=""
     unicode=""
     ret=$(curl https://api.github.com/emojis)
-    echo $ret
+    echo "$ret" | jq -c  '.[]'
     if true
     then
         # TODO - instead of using github url for the full image, need to grab

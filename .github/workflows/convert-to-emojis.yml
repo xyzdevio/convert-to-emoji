@@ -5,6 +5,10 @@ jobs:
   find-and-convert:
     runs-on: ubuntu-latest
     steps:
+      - name: install-jq
+        run: |
+          sudo apt-get install jq
+          
       - name: Checkout
         uses: actions/checkout@v3
 
