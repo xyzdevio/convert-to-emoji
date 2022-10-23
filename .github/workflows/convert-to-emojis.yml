@@ -10,6 +10,7 @@ jobs:
 
       - name: convert-md-files
         run: |
+          ls -al
           echo "doing the md files"
           find . -name \*.md
     
