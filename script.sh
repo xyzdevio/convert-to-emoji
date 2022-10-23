@@ -23,7 +23,7 @@ for item in $list; do
         # TODO - instead of using github url for the full image, need to grab
         # the actual unicode character U+1f4af
         github_url="https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8"
-        unicode="U+1f4af"
+        unicode="\U1f4af"
         unicode=${unicode^^}
         echo $unicode
         echo "converting - $item"
@@ -32,6 +32,6 @@ for item in $list; do
         continue
     fi
     # replace str in file as img link
-    sed -i -e "s,$item,$unicode \<\!-- \![$item]($github_url) --\>,g" $filename
+    sed -i -e "s,$item,$(echo -e $unicode) \<\!-- \![$item]($github_url) --\>,g" $filename
 done
 
