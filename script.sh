@@ -17,12 +17,13 @@ for item in $list; do
     echo $str
     # find in github api
     # if found
-    if true; do
+    if true
+    then
         echo "converting - $item"
-    else; do
+    else
         echo "WARNING - $item is not a viable github emoji to convert"
         continue
-    done
+    fi
     # replace str in file as img link
     github_url="https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8"
     sed -i -e "/$item/![$item]($github_url)/g" $filename
