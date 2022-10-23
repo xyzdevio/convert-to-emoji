@@ -16,7 +16,7 @@ jobs:
       - name: convert-mdx-files
         run: |
           echo "doing the mdx files"
-          find . -name \*.mdx | sort -nr | xargs -l -i echo '{}'
+          find . -name \*.mdx | sort -nr | xargs -l -i ./script.sh '{}'
 
       - name: convert-user-specified-files
         run: |
