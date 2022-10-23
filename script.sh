@@ -24,7 +24,7 @@ for item in $list; do
 
     # if unicode val is found (aka not null), then handle
     unicode=""
-    if [[ -z $github_url ]] || [$github_url="null"]
+    if [[ -z $github_url ]] || ["$github_url"="null"]
     then
         echo "WARNING - $item is not a viable github emoji to convert"
         continue
