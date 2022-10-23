@@ -19,7 +19,7 @@ This would be great to add to the action sequence that runs before a github page
 Dont want to use an extensive database here, so this will be limited by how many emojis there are out there that are easily grab-able (not grabbing all of emojipedia for ex).<br/>
 Starting solely with the github specific ones and then adding more as time goes on.
 
-:warning: This means though, that I do need to add a warning or error on the action that if it runs and finds something that could count as an emoji, but doesnt have it on record, it still notifies the user instead of erroring silently.
+⚠. <!-- ![warning]("https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8") --> This means though, that I do need to add a warning or error on the action that if it runs and finds something that could count as an emoji, but doesnt have it on record, it still notifies the user instead of erroring silently.
 
 ## Steps (TOC)
 
@@ -31,6 +31,6 @@ Starting solely with the github specific ones and then adding more as time goes 
   - this [explanation page](https://cldr.unicode.org/#TOC-What-is-CLDR-) goes with it
 - even more of a dumdum, [this api](https://docs.github.com/en/rest/emojis) exists for easy use 
 
-:warning:
-:grinning:
+⚠. <!-- ![warning]("https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8") -->
+😀 <!-- ![grinning]("https://github.githubassets.com/images/icons/emoji/unicode/1f600.png?v8") -->
 
