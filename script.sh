@@ -26,7 +26,7 @@ for item in $list; do
     fi
     # replace str in file as img link
     github_url="https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8"
-    echo "/$item/\\![$item](github_url)/g"
-    sed -i -e "/$item/\\![$item](github_url)/g" $filename
+    echo "/$item/\\![$item](github_url)/"
+    sed -i -e "/$item/\\![$item](github_url)/" $filename
 done
 
