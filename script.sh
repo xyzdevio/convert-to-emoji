@@ -29,7 +29,8 @@ for item in $list; do
         # TODO - instead of using github url for the full image, need to grab
         # the actual unicode character U+1f4af
         #github_url="https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8"
-        unicode="\U${$(echo $github_url):60:5}"
+        url_copy=$(echo -e $github_url)
+        unicode="\U${url_copy:60:5}"
         unicode=${unicode^^}
         echo $unicode
         echo "converting - $item"
