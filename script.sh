@@ -16,16 +16,16 @@ for item in $list; do
     # working str
     echo $str
     # find in github api
-    # if found
+    github_url=""
     if true
     then
+        github_url="https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8"
         echo "converting - $item"
     else
         echo "WARNING - $item is not a viable github emoji to convert"
         continue
     fi
     # replace str in file as img link
-    github_url="https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8"
     sed -i -e "s,$item,\![$item]($github_url),g" $filename
 done
 
