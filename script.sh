@@ -19,7 +19,7 @@ for item in $list; do
     github_url=""
     unicode=""
     ret=$(curl https://api.github.com/emojis)
-    echo "$ret" | jq -c  '.[$(echo -e $str)]'
+    echo "$ret" | jq -c  ".[\"$str\"]"
     # TODO - need a way to grab from 59->just the length until a non letter char is instroduced
     # and have render proper unicode char for that
 
