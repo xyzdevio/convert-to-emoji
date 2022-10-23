@@ -11,10 +11,10 @@ list=$(grep -o "\\:\\S*\\:" $filename 2>/dev/null || true)
 # replace all valid emoji elements and use github upload of img file (aka use the github hosted url version)
 for item in $list; do
     len=$((${#item}-1))
-    str=${item:1:$len}
+    str=${item:1:$(($len-1))}
     echo $item
     echo ${#item}
-    echo $((${#item}-1))
+    echo $(($len-1))
     echo $len
     echo $str
 done
