@@ -24,12 +24,14 @@ for item in $list; do
         # the actual unicode character U+1f4af
         github_url="https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8"
         unicode="U+1f4af"
+        unicode=${unicode^^}
+        echo $unicode
         echo "converting - $item"
     else
         echo "WARNING - $item is not a viable github emoji to convert"
         continue
     fi
     # replace str in file as img link
-    sed -i -e "s,$item,$unicode\<\!-- \![$item]($github_url) --\>,g" $filename
+    sed -i -e "s,$item,$unicode \<\!-- \![$item]($github_url) --\>,g" $filename
 done
 
