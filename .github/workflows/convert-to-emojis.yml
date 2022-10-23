@@ -1,0 +1,33 @@
+name: find and convert
+
+on: [push]
+jobs: 
+  find-and-convert:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: convert-md-files
+      run: |
+        echo "doing the md files"
+        for f in ./*.md; do
+          echo "touching file: $f"
+          # do some stuff here with "$f"
+          # remember to quote it or spaces may misbehave
+        done
+    
+    - name: convert-mdx-files
+      run: |
+        echo "doing the mdx files"
+        for f in ./*.md; do
+          echo "touching file: $f"
+          # do some stuff here with "$f"
+          # remember to quote it or spaces may misbehave
+        done
+
+    - name: convert-user-specified-files
+      run: |
+        echo "converting specified files"
+      
+

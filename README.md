@@ -6,7 +6,7 @@
 
 I like writing things in the base markdown and slack/discord style where you can grab the item directly from the code instead of searching for them from a direct emoji maker.
 
-Problem is, half the time those items dont directly copy or show up as pure text even in .mdx files.
+Problem is, half the time those items dont directly copy or only show up as pure text on website publish even in .mdx files.
 
 ### Goal:
 
@@ -29,7 +29,7 @@ Starting solely with the github specific ones and then adding more as time goes 
 - grabbing image versions from [emojipedia](https://emojipedia.org/) for a quick copy
 - actually, just found the [open resource](https://unicode.org/emoji/charts/full-emoji-list.html) for this --> maybe i can purely do this by queries like the emoji-cheat-sheet is doing
   - this [explanation page](https://cldr.unicode.org/#TOC-What-is-CLDR-) goes with it
-- even more of a dumdum, this api exists for easy use: https://docs.github.com/en/rest/emojis
+- even more of a dumdum, [this api](https://docs.github.com/en/rest/emojis) exists for easy use 
 
 :warning:
 :grinning:
