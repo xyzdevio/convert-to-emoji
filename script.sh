@@ -24,20 +24,21 @@ for item in $list; do
 
     # if unicode val is found (aka not null), then handle
     unicode=""
-    if [[ ! -z $github_url ]]
+    if [[ -z $github_url ]] || [$github_url="null"]
     then
-        # TODO - instead of using github url for the full image, need to grab
-        # the actual unicode character U+1f4af
-        #github_url="https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8"
-        url_copy=$(echo -e $github_url)
-        unicode="\U${url_copy:60:5}"
-        unicode=${unicode^^}
-        echo $unicode
-        echo "converting - $item"
-    else
         echo "WARNING - $item is not a viable github emoji to convert"
         continue
     fi
+
+    # TODO - instead of using github url for the full image, need to grab
+    # the actual unicode character U+1f4af
+    #github_url="https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8"
+    url_copy=$(echo -e $github_url)
+    unicode="\U${url_copy:60:5}"
+    unicode=${unicode^^}
+    echo $unicode
+    echo "converting - $item"
+
     # replace str in file as img link
     sed -i -e "s,$item,$(echo -e $unicode) \<\!-- \![$str]($github_url) --\>,g" $filename
 done
