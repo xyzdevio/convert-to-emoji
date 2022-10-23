@@ -6,7 +6,7 @@
 
 I like writing things in the base markdown and slack/discord style where you can grab the item directly from the code instead of searching for them from a direct emoji maker.
 
-Problem is, half the time those items dont directly copy or show up as pure text even in .mdx files.
+Problem is, half the time those items dont directly copy or only show up as pure text on website publish even in .mdx files.
 
 ### Goal:
 
@@ -19,7 +19,7 @@ This would be great to add to the action sequence that runs before a github page
 Dont want to use an extensive database here, so this will be limited by how many emojis there are out there that are easily grab-able (not grabbing all of emojipedia for ex).<br/>
 Starting solely with the github specific ones and then adding more as time goes on.
 
-:warning: This means though, that I do need to add a warning or error on the action that if it runs and finds something that could count as an emoji, but doesnt have it on record, it still notifies the user instead of erroring silently.
+⚠. <!-- ![warning]("https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8") --> This means though, that I do need to add a warning or error on the action that if it runs and finds something that could count as an emoji, but doesnt have it on record, it still notifies the user instead of erroring silently.
 
 ## Steps (TOC)
 
@@ -29,8 +29,14 @@ Starting solely with the github specific ones and then adding more as time goes 
 - grabbing image versions from [emojipedia](https://emojipedia.org/) for a quick copy
 - actually, just found the [open resource](https://unicode.org/emoji/charts/full-emoji-list.html) for this --> maybe i can purely do this by queries like the emoji-cheat-sheet is doing
   - this [explanation page](https://cldr.unicode.org/#TOC-What-is-CLDR-) goes with it
-- even more of a dumdum, this api exists for easy use: https://docs.github.com/en/rest/emojis
+- even more of a dumdum, [this api](https://docs.github.com/en/rest/emojis) exists for easy use 
 
-:warning:
-:grinning:
+⚠. <!-- ![warning]("https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8") -->
+😀 <!-- ![grinning]("https://github.githubassets.com/images/icons/emoji/unicode/1f600.png?v8") -->
+
+## Remaining todos:
+
+- [ ] have this work on user specified files
+  - right now runs on all existing .md and .mdx files
+- [ ] turn this into a marketplace useable github action for others
 

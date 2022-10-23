@@ -1,0 +1,43 @@
+name: find and convert
+
+on: [push]
+jobs: 
+  find-and-convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install-jq
+        run: |
+          sudo apt-get install jq
+          
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: convert-md-files
+        run: |
+          ls -al
+          echo "doing the md files"
+          find . -name \*.md | sort -nr | xargs -l -i ./script.sh '{}'
+    
+      - name: convert-mdx-files
+        run: |
+          echo "doing the mdx files"
+          find . -name \*.mdx | sort -nr | xargs -l -i ./script.sh '{}'
+
+      - name: convert-user-specified-files
+        run: |
+          echo "converting user-specified files"
+
+      - name: Verify Changed files
+        uses: tj-actions/verify-changed-files@v12
+        id: verify-changed-files
+        with:
+          files: .
+
+      - name: push changes if any
+        if: steps.verify-changed-files.outputs.files_changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -am "[BOT] converting converting converting"
+          git push
+
