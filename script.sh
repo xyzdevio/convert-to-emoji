@@ -1,13 +1,11 @@
 #!/bin/bash
 
-echo "here"
 filename=$1
 echo $filename
-echo "here2"
 
 # find potential emojis in text
-grep -o "\\:\\S*\\:" $filename
-echo "here3"
+# ignore error 123 for cases where no match is found
+grep -o "\\:\\S*\\:" $filename 2> /dev/null
 
 # search for emoji corresponding img and warn but still continue if not found
 

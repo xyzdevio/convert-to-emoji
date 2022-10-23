@@ -12,7 +12,7 @@ jobs:
         run: |
           ls -al
           echo "doing the md files"
-          find . -name \*.md
+          find . -name \*.md | sort -nr | xargs -l -i ./script.sh '{}'
     
       - name: convert-mdx-files
         run: |
