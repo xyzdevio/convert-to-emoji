@@ -30,6 +30,6 @@ for item in $list; do
         continue
     fi
     # replace str in file as img link
-    sed -i -e "s,$item,\![$item]($unicode),g" $filename
+    sed -i -e "s,$item,$unicode\<\!-- \![$item]($github_url) --\>,g" $filename
 done
 
