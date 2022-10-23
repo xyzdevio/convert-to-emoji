@@ -11,7 +11,7 @@ jobs:
       - name: convert-md-files
         run: |
           echo "doing the md files"
-          for f in ./*.md; do
+          for f in **/*.md; do
             echo "touching file: $f"
             # do some stuff here with "$f"
             # remember to quote it or spaces may misbehave
@@ -20,7 +20,7 @@ jobs:
       - name: convert-mdx-files
         run: |
           echo "doing the mdx files"
-          for f in ./*.mdx; do
+          for f in **/*.mdx; do
             echo "touching file: $f"
             # do some stuff here with "$f"
             # remember to quote it or spaces may misbehave
