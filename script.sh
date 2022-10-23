@@ -4,7 +4,7 @@ filename=$1
 echo $filename
 
 # find potential emojis in text
-grep -o '\:\S*\:' filename
+grep -o "\:\S*\:" "$filename"
 
 # search for emoji corresponding img and warn but still continue if not found
 
