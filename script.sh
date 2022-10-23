@@ -20,6 +20,7 @@ for item in $list; do
     github_url=$(echo "$github_json" | jq -c  ".[\"$str\"]")
     # TODO - need a way to grab from 59->just the length until a non letter char is instroduced
     # and have render proper unicode char for that
+    echo "github_url: $github_url"
 
     # if unicode val is found (aka not null), then handle
     unicode=""
@@ -28,7 +29,7 @@ for item in $list; do
         # TODO - instead of using github url for the full image, need to grab
         # the actual unicode character U+1f4af
         #github_url="https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8"
-        unicode="\U${github_url:59:5}"
+        unicode="\U${$(echo $github_url):60:5}"
         unicode=${unicode^^}
         echo $unicode
         echo "converting - $item"
