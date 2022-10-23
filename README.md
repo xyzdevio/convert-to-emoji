@@ -34,3 +34,9 @@ Starting solely with the github specific ones and then adding more as time goes 
 ⚠. <!-- ![warning]("https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8") -->
 😀 <!-- ![grinning]("https://github.githubassets.com/images/icons/emoji/unicode/1f600.png?v8") -->
 
+## Remaining todos:
+
+- [ ] have this work on user specified files
+  - right now runs on all existing .md and .mdx files
+- [ ] turn this into a marketplace useable github action for others
+
