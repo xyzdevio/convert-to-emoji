@@ -24,7 +24,7 @@ for item in $list; do
 
     # if unicode val is found (aka not null), then handle
     unicode=""
-    if [[ ! -z "$github_url" ]]
+    if [[ ! -z $github_url ]]
     then
         # TODO - instead of using github url for the full image, need to grab
         # the actual unicode character U+1f4af
