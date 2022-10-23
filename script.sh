@@ -23,6 +23,8 @@ for item in $list; do
         # TODO - instead of using github url for the full image, need to grab
         # the actual unicode character U+1f4af
         github_url="https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8"
+        code="\U${github_url:59:5}"
+        echo $code
         unicode="\U1f4af"
         unicode=${unicode^^}
         echo $unicode
