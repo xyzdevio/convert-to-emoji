@@ -21,6 +21,6 @@ jobs:
 
       - name: convert-user-specified-files
         run: |
-          echo "converting specified files"
+          echo "converting user-specified files"
       
 
